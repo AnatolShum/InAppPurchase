@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C2A89762BB47CDB005A6D0B /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A89752BB47CDB005A6D0B /* PurchaseButton.swift */; };
 		3CBF81A32BB41F7E00CC969B /* InAppPurchaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF81A22BB41F7E00CC969B /* InAppPurchaseApp.swift */; };
 		3CBF81A52BB41F7E00CC969B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF81A42BB41F7E00CC969B /* MainView.swift */; };
 		3CBF81A72BB41F7F00CC969B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CBF81A62BB41F7F00CC969B /* Assets.xcassets */; };
@@ -14,9 +15,13 @@
 		3CBF81B32BB4202800CC969B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF81B22BB4202800CC969B /* AppDelegate.swift */; };
 		3CBF81B62BB421AE00CC969B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBF81B52BB421AE00CC969B /* StoreKit.framework */; };
 		3CBF81BB2BB4272800CC969B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF81BA2BB4272800CC969B /* MainViewModel.swift */; };
+		3CBF81BF2BB42ACA00CC969B /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF81BE2BB42ACA00CC969B /* PurchaseManager.swift */; };
+		3CBF81C62BB4723900CC969B /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF81C52BB4723900CC969B /* PurchaseView.swift */; };
+		3CBF81C82BB4724A00CC969B /* PurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF81C72BB4724A00CC969B /* PurchaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C2A89752BB47CDB005A6D0B /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
 		3CBF819F2BB41F7E00CC969B /* InAppPurchase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppPurchase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBF81A22BB41F7E00CC969B /* InAppPurchaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseApp.swift; sourceTree = "<group>"; };
 		3CBF81A42BB41F7E00CC969B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -25,6 +30,10 @@
 		3CBF81B22BB4202800CC969B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CBF81B52BB421AE00CC969B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3CBF81BA2BB4272800CC969B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		3CBF81BE2BB42ACA00CC969B /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		3CBF81C02BB45C2800CC969B /* Premium.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Premium.storekit; sourceTree = "<group>"; };
+		3CBF81C52BB4723900CC969B /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		3CBF81C72BB4724A00CC969B /* PurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C2A89732BB47CA7005A6D0B /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				3C2A89752BB47CDB005A6D0B /* PurchaseButton.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
 		3CBF81962BB41F7E00CC969B = {
 			isa = PBXGroup;
 			children = (
@@ -59,9 +76,11 @@
 		3CBF81A12BB41F7E00CC969B /* InAppPurchase */ = {
 			isa = PBXGroup;
 			children = (
-				3CBF81B12BB41FDD00CC969B /* Resources */,
 				3CBF81B02BB41FCF00CC969B /* Application */,
-				3CBF81B72BB426FE00CC969B /* Scene */,
+				3C2A89732BB47CA7005A6D0B /* ReusableViews */,
+				3CBF81B12BB41FDD00CC969B /* Resources */,
+				3CBF81B72BB426FE00CC969B /* Scenes */,
+				3CBF81BC2BB42A6500CC969B /* Managers */,
 				3CBF81A82BB41F7F00CC969B /* Preview Content */,
 			);
 			path = InAppPurchase;
@@ -87,6 +106,7 @@
 		3CBF81B12BB41FDD00CC969B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3CBF81C02BB45C2800CC969B /* Premium.storekit */,
 				3CBF81A62BB41F7F00CC969B /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -100,13 +120,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3CBF81B72BB426FE00CC969B /* Scene */ = {
+		3CBF81B72BB426FE00CC969B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				3CBF81B92BB4270F00CC969B /* viewModel */,
-				3CBF81B82BB4270900CC969B /* view */,
+				3CBF81C22BB471F900CC969B /* PurchaseView */,
+				3CBF81C12BB471F100CC969B /* Main */,
 			);
-			path = Scene;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		3CBF81B82BB4270900CC969B /* view */ = {
@@ -121,6 +141,56 @@
 			isa = PBXGroup;
 			children = (
 				3CBF81BA2BB4272800CC969B /* MainViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		3CBF81BC2BB42A6500CC969B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3CBF81BD2BB42A7500CC969B /* PurchaseManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		3CBF81BD2BB42A7500CC969B /* PurchaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				3CBF81BE2BB42ACA00CC969B /* PurchaseManager.swift */,
+			);
+			path = PurchaseManager;
+			sourceTree = "<group>";
+		};
+		3CBF81C12BB471F100CC969B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3CBF81B92BB4270F00CC969B /* viewModel */,
+				3CBF81B82BB4270900CC969B /* view */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3CBF81C22BB471F900CC969B /* PurchaseView */ = {
+			isa = PBXGroup;
+			children = (
+				3CBF81C42BB4721900CC969B /* viewModel */,
+				3CBF81C32BB4721300CC969B /* view */,
+			);
+			path = PurchaseView;
+			sourceTree = "<group>";
+		};
+		3CBF81C32BB4721300CC969B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3CBF81C52BB4723900CC969B /* PurchaseView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3CBF81C42BB4721900CC969B /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3CBF81C72BB4724A00CC969B /* PurchaseViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -196,9 +266,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CBF81B32BB4202800CC969B /* AppDelegate.swift in Sources */,
+				3CBF81C82BB4724A00CC969B /* PurchaseViewModel.swift in Sources */,
 				3CBF81A52BB41F7E00CC969B /* MainView.swift in Sources */,
 				3CBF81A32BB41F7E00CC969B /* InAppPurchaseApp.swift in Sources */,
+				3CBF81C62BB4723900CC969B /* PurchaseView.swift in Sources */,
 				3CBF81BB2BB4272800CC969B /* MainViewModel.swift in Sources */,
+				3C2A89762BB47CDB005A6D0B /* PurchaseButton.swift in Sources */,
+				3CBF81BF2BB42ACA00CC969B /* PurchaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +419,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = AnatolShum.icloud.com.InAppPurchase;
+				PRODUCT_BUNDLE_IDENTIFIER = AnatolShum.com.icloud.InAppPurchase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -374,7 +448,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = AnatolShum.icloud.com.InAppPurchase;
+				PRODUCT_BUNDLE_IDENTIFIER = AnatolShum.com.icloud.InAppPurchase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

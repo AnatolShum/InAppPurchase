@@ -8,8 +8,4 @@
 import Foundation
 
 @Observable
-class MainViewModel {
-    func subscribe() {
-        print("Subscribe")
-    }
-}
+class MainViewModel { }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     private var viewModel = MainViewModel()
+    @State private var showSheet = false
     
     var body: some View {
         VStack {
@@ -17,13 +18,16 @@ struct MainView: View {
                     .foregroundStyle(Color.blue)
                 
                 Button(action: {
-                    viewModel.subscribe()
+                    showSheet.toggle()
                 }, label: {
                     Text("Subscribe")
                         .foregroundStyle(Color.white)
                         .fontWeight(.medium)
                         .frame(maxWidth: .infinity)
                 })
+                .sheet(isPresented: $showSheet) {
+                    PurchaseView()
+                }
             }
             .frame(height: 44)
         }
