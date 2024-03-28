@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C2A89762BB47CDB005A6D0B /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A89752BB47CDB005A6D0B /* PurchaseButton.swift */; };
+		3C2A897B2BB56D32005A6D0B /* MainViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A897A2BB56D32005A6D0B /* MainViewButton.swift */; };
 		3CBF81A32BB41F7E00CC969B /* InAppPurchaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF81A22BB41F7E00CC969B /* InAppPurchaseApp.swift */; };
 		3CBF81A52BB41F7E00CC969B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF81A42BB41F7E00CC969B /* MainView.swift */; };
 		3CBF81A72BB41F7F00CC969B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CBF81A62BB41F7F00CC969B /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		3C2A89752BB47CDB005A6D0B /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
+		3C2A897A2BB56D32005A6D0B /* MainViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewButton.swift; sourceTree = "<group>"; };
 		3CBF819F2BB41F7E00CC969B /* InAppPurchase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppPurchase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBF81A22BB41F7E00CC969B /* InAppPurchaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseApp.swift; sourceTree = "<group>"; };
 		3CBF81A42BB41F7E00CC969B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				3C2A89752BB47CDB005A6D0B /* PurchaseButton.swift */,
+				3C2A897A2BB56D32005A6D0B /* MainViewButton.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				3CBF81C82BB4724A00CC969B /* PurchaseViewModel.swift in Sources */,
 				3CBF81A52BB41F7E00CC969B /* MainView.swift in Sources */,
 				3CBF81A32BB41F7E00CC969B /* InAppPurchaseApp.swift in Sources */,
+				3C2A897B2BB56D32005A6D0B /* MainViewButton.swift in Sources */,
 				3CBF81C62BB4723900CC969B /* PurchaseView.swift in Sources */,
 				3CBF81BB2BB4272800CC969B /* MainViewModel.swift in Sources */,
 				3C2A89762BB47CDB005A6D0B /* PurchaseButton.swift in Sources */,

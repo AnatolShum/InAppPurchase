@@ -8,4 +8,6 @@
 import Foundation
 
 @Observable
-class MainViewModel { }
+class MainViewModel { 
+    let productIds: [String] = [PurchaseManager.shared.monthlyProductId, PurchaseManager.shared.yearlyProductId]
+}

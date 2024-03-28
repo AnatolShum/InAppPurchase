@@ -6,30 +6,23 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct MainView: View {
     private var viewModel = MainViewModel()
-    @State private var showSheet = false
+    @State private var showCustomSheet = false
+    @State private var showUISheet = false
     
     var body: some View {
-        VStack {
-            ZStack {
-                RoundedRectangle(cornerRadius: 8)
-                    .foregroundStyle(Color.blue)
-                
-                Button(action: {
-                    showSheet.toggle()
-                }, label: {
-                    Text("Subscribe")
-                        .foregroundStyle(Color.white)
-                        .fontWeight(.medium)
-                        .frame(maxWidth: .infinity)
-                })
-                .sheet(isPresented: $showSheet) {
-                    PurchaseView()
-                }
-            }
-            .frame(height: 44)
+        VStack(spacing: 20) {
+            MainViewButton(showSheet: $showCustomSheet, title: "Custom subscribe", sheetView: AnyView(PurchaseView()))
+            
+            MainViewButton(showSheet: $showUISheet, title: "SwiftUI subscribe", sheetView: AnyView(
+                StoreView(ids: viewModel.productIds)
+                .background(.background.secondary)
+                .storeButton(.visible, for: .restorePurchases)
+                .presentationDetents([.fraction(0.4)])
+            ))
         }
         .padding()
     }

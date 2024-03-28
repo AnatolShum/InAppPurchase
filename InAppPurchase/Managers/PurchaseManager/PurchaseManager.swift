@@ -75,10 +75,10 @@ extension PurchaseManager: SKPaymentTransactionObserver {
             switch transaction.transactionState {
             case .restored:
                 print("Transaction restored successful")
-                SKPaymentQueue.default().finishTransaction(transaction)
+                queue.finishTransaction(transaction)
             case .purchased:
                 print("Transaction purchased successful")
-                SKPaymentQueue.default().finishTransaction(transaction)
+                queue.finishTransaction(transaction)
             case .failed:
                 if let error = transaction.error {
                     print("Transaction failed with error: \(error.localizedDescription)")
@@ -86,7 +86,7 @@ extension PurchaseManager: SKPaymentTransactionObserver {
                     print("Transaction canceled by the user")
                 }
                 failedStatusPublisher.send()
-                SKPaymentQueue.default().finishTransaction(transaction)
+                queue.finishTransaction(transaction)
             default:
                 break
             }
